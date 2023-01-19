@@ -3,16 +3,43 @@
 
 .header {
     box-shadow: $botton_shadow;
+    padding-top: 20px; /// need to ask about header top on mobile
+    @include resp($lg) {
+        padding-top: 0;
+    }
+    nav {
+        @include resp($xl) {
+            // height: 135px;
+        }
+        @include resp($xxl) {
+            height: 176px;
+            padding-left: 70px!important;
+            padding-right: 70px!important;
+        }
+    }
     .brand_logo {
         width: 52px;
     }
-    // navbar brand 
+    .brand-title-logo {
+    }
+    // navbar brand
     .navbar-brand {
         width: 152px;
-        text-align: right
+        text-align: right;
+        @include resp($xxl) {
+            width: 200px;
+        }
+        @include resp ($mxl) {
+            width: 252px;
+        }
     }
-    // navbar 
+    // navbar
     .navbar {
+        .navbar-nav {
+            @include resp ($lg) {
+                column-gap: 80px;
+            }
+        }
         .nav-item {
             a {
                 @include text(20px);

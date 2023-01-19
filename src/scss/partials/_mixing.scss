@@ -7,3 +7,11 @@
     line-height: 100%;
     letter-spacing: -0.024em;
 }
+
+
+// this mixing push responsive desing inside that class 
+@mixin resp ($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
