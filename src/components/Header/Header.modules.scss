@@ -1,0 +1,22 @@
+@import "../../scss/partials/variable";
+@import "../../scss/partials/mixing";
+
+.header {
+    box-shadow: $botton_shadow;
+    .brand_logo {
+        width: 52px;
+    }
+    // navbar brand 
+    .navbar-brand {
+        width: 152px;
+        text-align: right
+    }
+    // navbar 
+    .navbar {
+        .nav-item {
+            a {
+                @include text(20px);
+            }
+        }
+    }
+}

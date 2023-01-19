@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
+import Scheduling from "./pages/Scheduling";
 
 function App() {
-
-    return <div className="App">hello modh rejoan</div>;
+    return (
+        <Fragment>
+            <Scheduling />
+        </Fragment>
+    );
 }
 
 export default App;

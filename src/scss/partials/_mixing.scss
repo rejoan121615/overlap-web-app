@@ -1,0 +1,9 @@
+@import "./variable";
+
+@mixin text( $size: 16px) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: $size;
+    line-height: 100%;
+    letter-spacing: -0.024em;
+}
