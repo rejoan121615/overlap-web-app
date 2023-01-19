@@ -14,6 +14,9 @@
     @include py(24px, 24px);
     border-radius: 20px;
     box-shadow: $shadow-sm;
+    width: 100%;
+    max-width: 360px;
+    @include mx(auto, auto);
     p {
         margin-bottom: 0px;
     }
@@ -49,9 +52,16 @@
         margin-bottom: $gap;
     }
     .week-card-body {
-      display: flex;
-      flex-flow: column wrap;
+      // display: flex;
+      // flex-flow: column wrap;
+      display: grid;
+      grid-template-columns: 1fr;
       row-gap: $gap;
+      max-height: 400px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
         // timelist row
         .time-list-row {
             @extend %row-grid;
