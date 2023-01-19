@@ -19,3 +19,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+.title-20px {
+    @include text(20px);
+    color: $dark-gray;
+    text-transform: capitalize;
+}

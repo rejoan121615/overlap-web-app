@@ -1,0 +1,19 @@
+@import "../../../scss/partials/mixing";
+@import "../../../scss/partials/variable";
+
+.back-btn {
+  color: $light-gray;
+}
+
+.progress-container {
+  .progress-line {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    // back ground line 
+    .pro-line-bg {
+      // height: 8px;
+      width: 100%;
+    }
+  }
+}

@@ -29,7 +29,7 @@ const LgFooterbar = () => {
 
 const Footer = () => {
     return (
-        <footer className=" position-absolute bottom-0 w-100 ">
+        <footer className=" w-100 ">
             <MobileNav />
             <LgFooterbar />
         </footer>

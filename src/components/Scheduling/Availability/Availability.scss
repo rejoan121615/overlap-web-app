@@ -1,0 +1,78 @@
+@import "../../../scss/partials/mixing";
+@import "../../../scss/partials/variable";
+
+.week-card {
+    // gap on child
+    $gap: 7px;
+    %row-grid {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        column-gap: $gap;
+    }
+    // main style
+    @include px(27px, 27px);
+    @include py(24px, 24px);
+    border-radius: 20px;
+    box-shadow: $shadow-sm;
+    p {
+        margin-bottom: 0px;
+    }
+    // week grid
+    .week-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: $gap;
+    }
+
+    .week-date-day-name {
+    }
+
+    .text-10px {
+        @include text(10px);
+        color: $dark-gray;
+    }
+    .text-12px {
+        @extend .text-10px;
+        font-size: 12px;
+    }
+    .date {
+        margin-bottom: 8px;
+        @extend .text-10px;
+    }
+    .day-name {
+        text-transform: capitalize;
+        @extend .text-12px;
+    }
+    // week card header
+    .week-card-header {
+        @extend %row-grid;
+        margin-bottom: $gap;
+    }
+    .week-card-body {
+      display: flex;
+      flex-flow: column wrap;
+      row-gap: $gap;
+        // timelist row
+        .time-list-row {
+            @extend %row-grid;
+            .hour {
+                @extend .text-10px;
+                justify-self: end;
+            }
+            .hour-list {
+                @extend .week-grid;
+
+                .hour-child {
+                    width: 100%;
+                    height: 18px;
+                    background-color: $light-gray-btn;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    &.mark {
+                      background-color: $light-green;
+                    }
+                }
+            }
+        }
+    }
+}

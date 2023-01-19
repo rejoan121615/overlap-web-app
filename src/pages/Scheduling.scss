@@ -1,2 +1,19 @@
-@import '../scss/partials/mixing';
-@import '../scss/partials/variable';
+@import "../scss/partials/mixing";
+@import "../scss/partials/variable";
+
+.availability {
+    display: grid;
+    grid-template: "button" 40px "availab" 1fr "progress" 95px / 1fr;
+    height: calc(100vh - (88px + 82px));
+    @include px(15px, 15px);
+    .btn-wrap {
+        grid-area: button;
+        width: 100%;
+        max-width: 300px;
+
+        @include mx(auto, auto);
+        button {
+            @include mx(auto, auto);
+        }
+    }
+}
