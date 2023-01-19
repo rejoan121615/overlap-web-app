@@ -2,10 +2,13 @@
 @import "../../scss/partials/mixing";
 
 .header {
-    box-shadow: $botton_shadow;
+    box-shadow: 0px 0.5px 5px 1px rgba(76, 76, 76, 0.15);
     padding-top: 20px; /// need to ask about header top on mobile
     @include resp($lg) {
         padding-top: 0;
+    }
+    @include resp($xxl) {
+        box-shadow: 0px 1px 5px 1px rgba(77, 77, 77, 0.15);
     }
     nav {
         @include resp($xl) {
@@ -13,8 +16,8 @@
         }
         @include resp($xxl) {
             height: 176px;
-            padding-left: 70px!important;
-            padding-right: 70px!important;
+            padding-left: 70px !important;
+            padding-right: 70px !important;
         }
     }
     .brand_logo {
@@ -29,14 +32,14 @@
         @include resp($xxl) {
             width: 200px;
         }
-        @include resp ($mxl) {
+        @include resp($mxl) {
             width: 252px;
         }
     }
     // navbar
     .navbar {
         .navbar-nav {
-            @include resp ($lg) {
+            @include resp($lg) {
                 column-gap: 80px;
             }
         }

@@ -7,13 +7,6 @@ import { Navbar, NavItem, NavLink, NavbarBrand, Nav } from "react-bootstrap";
 const Header = () => {
     return (
         <header className="header">
-            {/* <nav className="navbar navbar-expand-lg">
-                <div className={` container `}>
-                    <a className=" navbar-brand " href="">
-                        <img src={BrandLogo} alt="Brand Logo" />
-                    </a>
-                </div>
-            </nav> */}
             <Navbar className=" px-4  ">
                 <div className=" w-100 d-flex justify-content-between align-items-center py-lg-4 max-container ">
                     <div className=" brand_logo d-lg-none ">
@@ -28,9 +21,9 @@ const Header = () => {
                     </NavbarBrand>
                     {/* navbar  */}
                     <Nav className=" d-none d-lg-flex">
-                        {["home", "new metting", "account"].map((link) => {
+                        {["home", "new metting", "account"].map((link, index) => {
                             return (
-                                <NavItem>
+                                <NavItem key={index}>
                                     <NavLink className=" text-capitalize ">
                                         {link}
                                     </NavLink>

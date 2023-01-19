@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import MobileNav from "../components/MobileNav/MobileNav";
+import './Scheduling.scss'
+
 
 const Scheduling = () => {
     return (
-        <Fragment>
+        <div className=" scheduling ">
             <Header />
-            <MobileNav />
+
             <Footer />
-        </Fragment>
+        </div>
     );
 };
 

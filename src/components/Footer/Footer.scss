@@ -1,0 +1,23 @@
+@import '../../scss/partials/mixing';
+@import '../../scss/partials/variable';
+.lg-footer {
+  @include resp ($lg) {
+    @include py(35px, 35px);
+  }
+  @include resp ($xl) {
+    @include py(48px, 48px);
+  }
+  
+  a {
+    @include text(14px);
+    text-decoration: none;
+    color: $light-gray;
+    text-transform: capitalize;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

@@ -8,6 +8,23 @@
     letter-spacing: -0.024em;
 }
 
+// margin and padding 
+@mixin py ($t, $b) {
+    padding-top: $t;
+    padding-bottom: $b;
+}
+@mixin px ($l, $r) {
+    padding-left: $l;
+    padding-right: $r;
+}
+@mixin my ($t, $b) {
+    margin-top: $t;
+    margin-bottom: $b;
+}
+@mixin mx ($l, $r) {
+    margin-left: $l;
+    margin-right: $r;
+}
 
 // this mixing push responsive desing inside that class 
 @mixin resp ($width) {
