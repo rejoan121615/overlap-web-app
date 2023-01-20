@@ -1,0 +1,16 @@
+@import '../../scss/partials/variable';
+@import '../../scss/partials/mixing';
+
+.submitBtn {
+  background-color: $dark-green!important;
+  color: white;
+  @include px(20px, 20px);
+  border: none;
+  display: inline-block;
+  width: initial!important;
+  min-width: initial!important;
+}
+
+.submit-wrap {
+  margin-top: 20px;
+}
