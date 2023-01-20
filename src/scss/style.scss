@@ -1,7 +1,7 @@
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-// scss modules 
+// scss modules
 @import "partials/variable";
 @import "partials/mixing";
 
@@ -12,9 +12,7 @@
     font-family: $global_font;
 }
 
-
-
-// common custom class 
+// common custom class
 body {
     height: 100vh;
 }
@@ -26,16 +24,50 @@ body {
     height: 100%;
 }
 
+.shadow-card {
+    width: 100%;
+    box-shadow: $shadow-sm;
+    border-radius: 25px;
+    @include resp($lg) {
+        box-shadow: $shadow-lg;
+    }
+}
 
 .max-container {
-    max-width: 1440px!important;
+    max-width: 1440px !important;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .title-20px {
     @include text(20px);
     color: $dark-gray;
     text-transform: capitalize;
 }
+
+.main-section {
+    @include px(15px, 15px);
+    @include py(32px, 32px);
+}
+
+// global form style ----------
+.form-wrapper {
+    max-width: 360px;
+    @include mx(auto, auto);
+}
+.form-container {
+    @include px(15px, 15px);
+    @include py(20px, 20px);
+}
+legend {
+    @include text(16px);
+    color: $dark-gray;
+    text-align: center;
+    margin-bottom: 22px;
+    img {
+        width: 90px;
+        margin-left: 5px;
+    }
+}
+
+// button 

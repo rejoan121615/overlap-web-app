@@ -1,0 +1,12 @@
+@import '../../../scss/partials/variable';
+@import '../../../scss/partials/mixing';
+
+.googleBtn {
+
+  @extend .text-dark-gray;
+  box-shadow: $shadow-lg;
+  &:active {
+    outline: none;
+    border: none;
+  }
+}

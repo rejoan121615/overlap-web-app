@@ -1,5 +1,5 @@
-@import "../scss/partials/mixing";
-@import "../scss/partials/variable";
+@import "../../scss/partials/mixing";
+@import "../../scss/partials/variable";
 
 .availability {
     display: grid;
@@ -10,22 +10,21 @@
     @include py(30px, 30px);
     max-width: 1200px;
     @include mx(auto, auto);
-    // for large screen 922px 
-    @include resp ($lg) {
+    // for large screen 922px
+    @include resp($lg) {
         height: calc(100vh - (104px + 84px));
         grid-template-columns: 80% 20%;
         grid-template-rows: 40px 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "progress button"
-            "availab availab"
-        ;
+            "availab availab";
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         height: calc(100vh - (104px + 110px));
     }
-    // for extra large large screen 
-    @include resp ($xxl) {
-        height: calc( 100vh - (176px + 110px ));
+    // for extra large large screen
+    @include resp($xxl) {
+        height: calc(100vh - (176px + 110px));
     }
     .btn-wrap {
         grid-area: button;
@@ -42,7 +41,7 @@
     }
     .step {
         grid-area: progress;
-        @include resp ($lg) {
+        @include resp($lg) {
             padding-right: 35px;
         }
     }

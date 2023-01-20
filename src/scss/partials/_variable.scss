@@ -3,8 +3,25 @@ $dark-purple: #8669df;
 $dark-green: #3ea680;
 $light-green: #a9d3c4;
 $dark-gray: #4d4d4d;
-$light-gray: #A2A2A2;
-$light-gray-btn: #F5F5F5;
+$light-gray: #a2a2a2;
+$light-gray-btn: #f5f5f5;
+
+$colorList: (
+  dark-purple: $dark-purple,
+  dark-green: $dark-green,
+  light-green: $light-green,
+    dark-gray: $dark-gray,
+    light-gray: $light-gray,
+    light-gray-btn: $light-gray-btn,
+);
+@each $name, $color in $colorList {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
 
 // shadow
 $shadow-sm: 0px 0.5px 5px 1px rgba(76, 76, 76, 0.15);

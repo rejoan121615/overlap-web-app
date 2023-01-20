@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import "./Scheduling.scss";
+import "./scss/Scheduling.scss";
 import LongButton from "../components/Ui/Button/LongButton";
 import { FiCornerDownRight } from "react-icons/fi";
 import Availability from "../components/Scheduling/Availability/Availability";
