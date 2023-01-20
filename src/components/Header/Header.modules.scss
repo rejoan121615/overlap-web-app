@@ -3,7 +3,6 @@
 
 .header {
     box-shadow: 0px 0.5px 5px 1px rgba(76, 76, 76, 0.15);
-    padding-top: 20px; /// need to ask about header top on mobile
     @include resp($lg) {
         padding-top: 0;
     }

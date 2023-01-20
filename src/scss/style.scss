@@ -13,7 +13,20 @@
 }
 
 
+
 // common custom class 
+body {
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
 .max-container {
     max-width: 1440px!important;
     margin-left: auto;
