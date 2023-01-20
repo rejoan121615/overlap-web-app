@@ -1,27 +1,30 @@
 import React from "react";
 import "./Progress.scss";
 import { MdArrowBackIosNew } from "react-icons/md";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import { Col, Row } from "react-bootstrap";
 
 const MeetingCreationStep = () => {
     return <div className=" meeting-step">{/* meeting title  */}</div>;
 };
 
-const Progress = () => {
+const ProgressElement = () => {
     return (
-        <div className=" d-flex align-items-center justify-content-between progress-container">
-            <button className=" btn back-btn">
-                <MdArrowBackIosNew size={30} />
-            </button>
-            {/* progress bar  */}
-            <div className=" progress-line flex-grow-1 ">
-                <div className=" pro-line-bg"></div>
+        <div>
+            <div className=" progress-container">
+                <Row className=" align-items-center ">
+                    <Col className=" col-1">
+                        <button className=" btn back-btn">
+                            <MdArrowBackIosNew size={30} />
+                        </button>
+                    </Col>
+                    <Col className=" col-11 ">
+                        <ProgressBar className="" now={60} />
+                    </Col>
+                </Row>
             </div>
-            {/* button right  */}
-            <button className=" btn back-btn">
-                <MdArrowBackIosNew size={30} />
-            </button>
         </div>
     );
 };
 
-export default Progress;
+export default ProgressElement;

@@ -83,7 +83,7 @@ const Availability = () => {
     ];
     return (
         <div>
-            <h3 className=" title-20px text-center">add your availability</h3>
+            <h3 className=" title-20px text-center mb-4 ">add your availability</h3>
             {/* card  */}
             <div className="week-card">
                 {/* card heading  */}

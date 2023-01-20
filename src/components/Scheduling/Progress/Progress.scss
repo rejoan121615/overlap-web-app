@@ -2,18 +2,21 @@
 @import "../../../scss/partials/variable";
 
 .back-btn {
-  color: $light-gray;
+    color: $light-gray;
 }
 
 .progress-container {
-  .progress-line {
-    height: 8px;
-    border-radius: 10px;
-    background-color: #F5F5F5;
-    // back ground line 
-    .pro-line-bg {
-      // height: 8px;
-      width: 100%;
+    .progress-line {
+        height: 8px;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        // back ground line
+        .pro-line-bg {
+            // height: 8px;
+            width: 100%;
+        }
     }
-  }
+    .progress {
+        height: 8px;
+    }
 }
