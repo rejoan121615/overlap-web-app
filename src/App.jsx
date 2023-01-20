@@ -10,7 +10,7 @@ function App() {
             <main className=" main-section flex-grow-1 ">
                 <Outlet />
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </Fragment>
     );
 }

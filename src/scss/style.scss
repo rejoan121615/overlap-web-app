@@ -16,13 +16,34 @@ a {
     text-decoration: none;
 }
 
-// common typography
+// common typography and utility class -----------
 
 .text-16px {
     @include text(16px);
 }
 .text-12px {
     @include text(12px);
+}
+
+.my-20px {
+    @include my(20px, 20px);
+}
+
+%btn {
+    border: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.form-change-btn {
+    @extend %btn;
+    background-color: $light-green;
+    color: $dark-gray;
+    @extend .text-16px;
+    @include px(22px, 22px);
 }
 
 // all rounded row and button styles
@@ -98,8 +119,9 @@ legend {
 
 input.form-control {
     @include px(20px, 20px);
-    color: #a2a2a2;
+    color: $light-gray-btn;
     @include text(12px);
+    &::placeholder {}
 }
 
 // button

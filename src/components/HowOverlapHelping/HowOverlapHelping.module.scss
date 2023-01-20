@@ -1,0 +1,15 @@
+@import '../../scss/partials/mixing';
+@import "../../scss/partials/variable";
+
+
+.overlapHelpBtn {
+    background-color: $light-green;
+    color: $dark-gray;
+    border: 0px;
+    @include px(14px, 14px);
+    min-width: initial!important;
+}
+
+.overlapWrap {
+    max-width: 340px;
+}
