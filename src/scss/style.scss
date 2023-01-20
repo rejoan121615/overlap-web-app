@@ -12,6 +12,25 @@
     font-family: $global_font;
 }
 
+// common typography
+
+.text-16px {
+    @include text(16px);
+}
+
+// all rounded row and button styles
+.round-element {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.round-element-shadow {
+    @extend .round-element;
+    box-shadow: $shadow-sm;
+}
 // common custom class
 body {
     height: 100vh;
@@ -70,4 +89,10 @@ legend {
     }
 }
 
-// button 
+input.form-control {
+    @include px(20px, 20px);
+    color: #A2A2A2;
+    @include text(12px);
+}
+
+// button
