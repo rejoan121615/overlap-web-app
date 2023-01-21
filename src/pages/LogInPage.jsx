@@ -42,24 +42,26 @@ const LoginPage = () => {
                                     >
                                         Forgot password?
                                     </a>
-                                    <button
-                                        type="submit"
-                                        className={`round-element cus-btn submitBtn`}
-                                    >
-                                        Log in{" "}
-                                        <CgCornerDownRight
-                                            style={{ strokeWidth: "1px" }}
-                                        />
-                                    </button>
+                                    <Link to={'/create-a-meeting'}>
+                                        <button
+                                            type="submit"
+                                            className={`round-element cus-btn submitBtn`}
+                                        >
+                                            Log in{" "}
+                                            <CgCornerDownRight
+                                                style={{ strokeWidth: "1px" }}
+                                            />
+                                        </button>
+                                    </Link>
                                 </Form.Group>
                             </Form>
                         </div>
                     </div>
                     <p className=" text-center text-12px my-20px">Or</p>
                     <div className=" text-center ">
-                        <Link to={"/log-in"} className=" d-inline-block ">
+                        <Link to={"/sign-up"} className=" d-inline-block ">
                             <button className=" form-change-btn ">
-                                Log In
+                                Sign Up With Email
                             </button>
                         </Link>
                     </div>

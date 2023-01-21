@@ -3,8 +3,15 @@ import Styles from "./Header.modules.scss";
 import BrandLogo from "../../assets/Logo.png";
 import Logo from "../../assets/Overlap-name.png";
 import { Navbar, NavItem, NavLink, NavbarBrand, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+    const navUrl = [
+        { title: "home", url: "home" },
+        { title: "new meeting", url: "create-a-meeting" },
+        { title: "account", url: "account" },
+    ];
+
     return (
         <header className="header">
             <Navbar className=" px-4  ">
@@ -21,12 +28,15 @@ const Header = () => {
                     </NavbarBrand>
                     {/* navbar  */}
                     <Nav className=" d-none d-lg-flex">
-                        {["home", "new metting", "account"].map((link, index) => {
+                        {navUrl.map((link, index) => {
                             return (
                                 <NavItem key={index}>
-                                    <NavLink className=" text-capitalize ">
-                                        {link}
-                                    </NavLink>
+                                    <Link
+                                        to={`/${link.url}`}
+                                        className=" text-capitalize nav-link"
+                                    >
+                                        {link.title}
+                                    </Link>
                                 </NavItem>
                             );
                         })}

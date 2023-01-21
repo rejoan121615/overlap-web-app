@@ -6,14 +6,18 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // pages
 import LogInPage from "./pages/LogInPage";
 import SignUpPage from "./pages/SignUpPage";
+import CreateAMeetingPage from "./pages/CreateAMeetingPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="" element={<App />}>
-                    <Route index element={<SignUpPage />} />
+                <Route element={<App />}>
+                    <Route path="/sign-up" element={<SignUpPage />} />
                     <Route path="/log-in" element={<LogInPage />} />
+                    <Route path="/create-a-meeting" element={<CreateAMeetingPage />} />
+                    <Route path="/*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
