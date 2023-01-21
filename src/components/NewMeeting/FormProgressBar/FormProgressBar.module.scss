@@ -1,0 +1,49 @@
+@import "../../../scss/partials/variable";
+@import "../../../scss/partials/mixing";
+
+.Btn {
+    border: none;
+    background-color: transparent;
+}
+
+.ProWrap {
+    // full height width
+    %f-h-w {
+        height: 100%;
+        width: 100%;
+    }
+    // styles -----------
+    position: relative;
+    height: 8px;
+    width: 100%;
+    // background
+    .ProBg {
+        background-color: $light-gray-btn;
+        @extend %f-h-w;
+        border-radius: 10px;
+        .Progress {
+            height: 100%;
+            width: 10%;
+            background-color: $dark-green;
+            border-radius: 20px;
+        }
+    }
+    // dot container
+    .DotWrap {
+      position: absolute;
+      height: 100%;
+      width: 66%;
+      left: (34% / 2);
+      top: 0px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+        .Dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $light-gray-letter;
+        }
+    }
+}
