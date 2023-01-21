@@ -5,6 +5,33 @@
     border: none;
     background-color: transparent;
 }
+// title section -----
+.Title {
+    width: 66%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: (34% / 2);
+    margin-bottom: 10px;
+    .TitleText {
+        @include text(16px);
+        color: $light-gray-letter;
+        text-transform: capitalize;
+        margin-bottom: 0px;
+        &:nth-child(1) {
+          transform: translateX(-20px);
+        }
+        &:nth-child(2) {
+          transform: translateX(15px);
+        }
+        &:nth-child(3) {
+          transform: translateX(32px);
+        }
+    }
+}
+
+// progress bar styles
 
 .ProWrap {
     // full height width
@@ -28,17 +55,17 @@
             border-radius: 20px;
         }
     }
-    // dot container
+    // dot container -----
     .DotWrap {
-      position: absolute;
-      height: 100%;
-      width: 66%;
-      left: (34% / 2);
-      top: 0px;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: center;
+        position: absolute;
+        height: 100%;
+        width: 66%;
+        left: (34% / 2);
+        top: 0px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
         .Dot {
             width: 8px;
             height: 8px;
