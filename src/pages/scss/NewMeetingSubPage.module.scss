@@ -1,0 +1,16 @@
+@import '../../scss/partials/mixing';
+@import '../../scss/partials/variable';
+
+.Title {
+  @include text(20px);
+  text-align: center;
+  margin-bottom: 16px;
+  color: $dark-gray;
+}
+
+.Shadow_card {
+  padding: 15px;
+  
+}
+
+

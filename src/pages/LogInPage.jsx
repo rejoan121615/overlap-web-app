@@ -42,7 +42,7 @@ const LoginPage = () => {
                                     >
                                         Forgot password?
                                     </a>
-                                    <Link to={'/create-a-meeting'}>
+                                    <Link to={"/new-meeting"}>
                                         <button
                                             type="submit"
                                             className={`round-element cus-btn submitBtn`}

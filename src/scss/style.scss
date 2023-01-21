@@ -59,6 +59,9 @@ a {
     @extend .round-element;
     box-shadow: $shadow-sm;
 }
+
+// cards
+
 // common custom class
 body {
     height: 100vh;
@@ -117,11 +120,39 @@ legend {
     }
 }
 
-input.form-control {
-    @include px(20px, 20px);
-    color: $light-gray-btn;
-    @include text(12px);
-    &::placeholder {}
+// form style 
+.form-group {
+    margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
 }
+
+.form-label {
+    @include text(14px);
+    color: $dark-gray;
+}
+
+.form-control {
+    @include px(20px, 20px);
+    color: $dark-gray;
+    @include text(12px);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: $light-gray-btn;
+    border-color: $light-gray-btn;
+    &:focus {
+        border: none;
+        box-shadow: none;
+        background-color: $light-gray-btn;
+    }
+    &.invalid {
+        border-color: red;
+    }
+}
+
 
 // button
