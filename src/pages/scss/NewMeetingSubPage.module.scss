@@ -9,13 +9,26 @@
 }
 
 .ContentGrid {
-    // display: grid;
-    // grid-template:
-    //     "btn" 40px
-    //     "content" auto
-    //     "progressBar" 50px / 1fr;
-    // justify-content: space-between;
-    // height: 100%;
+    display: grid;
+    justify-content: space-between;
+    height: 100%;
+    // &.name {
+    //     grid-template:
+    //         "btn" 40px
+    //         "content" auto
+    //         "progressBar" 50px / 1fr;
+    // }
+    &.name {
+        grid-template:
+            "content" auto
+            "progressBar" 50px / 1fr;
+        @include resp($lg) {
+            grid-template:
+                "progressBar" 50px
+                "content" auto / 1fr;
+            row-gap: 64px;
+        }
+    }
 }
 
 .Title {
@@ -30,9 +43,22 @@
     }
 }
 
+.ContentCard {
+    grid-area: content;
+    .SecTitle {
+        text-align: center;
+        text-transform: capitalize;
+        @include text(20px);
+        color: $dark-gray;
+        margin-bottom: 16px;
+        @include resp($lg) {
+            display: none;
+        }
+    }
+}
+
 .Shadow_card {
     padding: 15px;
-    grid-area: content;
     align-self: start;
     @include resp($lg) {
         padding: 32px;
