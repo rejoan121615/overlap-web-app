@@ -1,16 +1,13 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import "./scss/Scheduling.scss";
 import LongButton from "../components/Ui/Button/LongButton";
 import { FiCornerDownRight } from "react-icons/fi";
 import Availability from "../components/Scheduling/Availability/Availability";
-import Progress from "../components/Scheduling/Progress/Progress";
+import FormProgressBar from "../components/NewMeeting/FormProgressBar/FormProgressBar";
 
 const Scheduling = () => {
     return (
         <div className=" scheduling ">
-            <Header />
             <div className=" availability">
                 {/* submit btn  */}
                 <div className="btn-wrap">
@@ -27,10 +24,9 @@ const Scheduling = () => {
                 </div>
                 {/* form progress  */}
                 <div className="step">
-                    <Progress />
+                    <FormProgressBar />
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

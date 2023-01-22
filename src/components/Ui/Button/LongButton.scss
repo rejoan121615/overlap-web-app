@@ -9,6 +9,10 @@
     min-width: 150px;
     color: white;
     @include text(15px);
+    &:hover {
+        background-color: $dark-purple;
+        color: white;
+    }
     .icon {
         font-weight: bold;
     }

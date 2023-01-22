@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Classess from "./FormProgressBar.module.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useEffect } from "react";
 
-const FormProgressBar = () => {
+const FormProgressBar = (props) => {
+    const [type, setType] = useState("name");
+
+    // update current state based on form type
+    useEffect(() => {
+        props.type ? setType(props.type) : null;
+    }, []);
+
     return (
-        <div className=" d-flex align-items-center ">
+        <div className={`${Classess.ProContainer} ${props.className}`}>
             {/* left btn  */}
-            <button className={`${Classess.Btn}`}>
-                <FiChevronLeft size={38} className=" text-light-gray " />
+            <button
+                className={`${Classess.Btn} ${
+                    type == "name" ? Classess.disable : ""
+                }`}
+            >
+                <FiChevronLeft className=" text-light-gray " />
             </button>
             {/* center  */}
             <div className=" flex-grow-1 ">
@@ -15,7 +27,12 @@ const FormProgressBar = () => {
                 <div className={Classess.Title}>
                     {["name", "time", "availablity"].map((text, index) => {
                         return (
-                            <p className={Classess.TitleText} key={index}>
+                            <p
+                                className={`${Classess.TitleText} ${
+                                    type == text ? Classess.active : ""
+                                }`}
+                                key={index}
+                            >
                                 {text}
                             </p>
                         );
@@ -37,8 +54,12 @@ const FormProgressBar = () => {
                 </div>
             </div>
             {/* right btn  */}
-            <button className={`${Classess.Btn}`}>
-                <FiChevronRight size={38} className=" text-light-gray " />
+            <button
+                className={`${Classess.Btn} ${
+                    type == "availablity" ? Classess.disable : ""
+                }`}
+            >
+                <FiChevronRight className=" text-light-gray " />
             </button>
         </div>
     );

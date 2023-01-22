@@ -1,16 +1,55 @@
-@import '../../scss/partials/mixing';
-@import '../../scss/partials/variable';
+@import "../../scss/partials/mixing";
+@import "../../scss/partials/variable";
+
+.containerWrap {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    @include mx(auto, auto);
+}
+
+.ContentGrid {
+    // display: grid;
+    // grid-template:
+    //     "btn" 40px
+    //     "content" auto
+    //     "progressBar" 50px / 1fr;
+    // justify-content: space-between;
+    // height: 100%;
+}
 
 .Title {
-  @include text(20px);
-  text-align: center;
-  margin-bottom: 16px;
-  color: $dark-gray;
+    @include text(20px);
+    text-align: center;
+    margin-bottom: 16px;
+    color: $dark-gray;
+    grid-area: title;
+    @include resp($lg) {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
 }
 
 .Shadow_card {
-  padding: 15px;
-  
+    padding: 15px;
+    grid-area: content;
+    align-self: start;
+    @include resp($lg) {
+        padding: 32px;
+    }
 }
 
+.submitBtn {
+    grid-area: btn;
+    height: 40px;
+}
 
+.ProCol {
+    display: flex;
+    align-items: flex-end;
+}
+
+.ProgressBar {
+    grid-area: progressBar;
+    height: 50px;
+}

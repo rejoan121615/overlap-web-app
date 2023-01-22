@@ -9,6 +9,7 @@ import SignUpPage from "./pages/SignUpPage";
 import NewMeetingPage from "./pages/NewMeetingPage";
 // meeting sub page
 import MettingName from "./pages/NewMeetingSubPage/MettingName";
+import Scheduling from "./pages/Scheduling";
 // error page
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/new-meeting" element={<NewMeetingPage />}>
                         <Route index element={<Navigate to={"name"} />} />
                         <Route path="name" element={<MettingName />} />
+                        <Route path="availablity" element={<Scheduling />} />
                     </Route>
                     <Route path="/*" element={<NotFoundPage />} />
                 </Route>

@@ -4,6 +4,16 @@
 .Btn {
     border: none;
     background-color: transparent;
+    & > * {
+      font-size: 38px;
+      @include resp($lg) {
+        font-size: 48px;
+      }
+    }
+    &.disable {
+      opacity: 0;
+      cursor: initial;
+    }
 }
 // title section -----
 .Title {
@@ -28,8 +38,26 @@
         &:nth-child(3) {
           transform: translateX(32px);
         }
+        &.active {
+          color: $dark-green;
+        }
     }
 }
+
+
+// progress bar container 
+.ProContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 16px;
+  height: 50px;
+  width: 100%;
+  @include resp ($lg) {
+    column-gap: 50px;
+  }
+}
+
 
 // progress bar styles
 
@@ -50,9 +78,11 @@
         border-radius: 10px;
         .Progress {
             height: 100%;
-            width: 10%;
+            width: 17%;
             background-color: $dark-green;
             border-radius: 20px;
+            position: relative;
+            z-index: 20;
         }
     }
     // dot container -----

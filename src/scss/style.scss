@@ -24,7 +24,11 @@ a {
 .text-12px {
     @include text(12px);
 }
-
+.title-20px {
+    @include text(20px);
+    color: $dark-gray;
+    text-transform: capitalize;
+}
 .my-20px {
     @include my(20px, 20px);
 }
@@ -89,17 +93,6 @@ body {
     margin-right: auto;
 }
 
-.title-20px {
-    @include text(20px);
-    color: $dark-gray;
-    text-transform: capitalize;
-}
-
-.main-section {
-    @include px(15px, 15px);
-    @include py(32px, 32px);
-}
-
 // global form style ----------
 .form-wrapper {
     max-width: 360px;
@@ -120,7 +113,7 @@ legend {
     }
 }
 
-// form style 
+// form style
 .form-group {
     margin-bottom: 16px;
     &:last-child {
@@ -131,6 +124,10 @@ legend {
 .form-label {
     @include text(14px);
     color: $dark-gray;
+    @include resp($lg) {
+        @include text(20px);
+        margin-bottom: 16px;
+    }
 }
 
 .form-control {
@@ -154,5 +151,11 @@ legend {
     }
 }
 
-
-// button
+// section styles -----------------------
+.main-section {
+    @include px(15px, 15px);
+    @include py(32px, 32px);
+    @include resp($lg) {
+        @include py(48px, 48px);
+    }
+}
