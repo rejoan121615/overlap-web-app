@@ -8,7 +8,8 @@ import LogInPage from "./pages/LogInPage";
 import SignUpPage from "./pages/SignUpPage";
 import NewMeetingPage from "./pages/NewMeetingPage";
 // meeting sub page
-import MettingName from "./pages/NewMeetingSubPage/MettingName";
+import MeetingName from "./pages/NewMeetingSubPage/MeetingName";
+import MeetingTime from "./pages/NewMeetingSubPage/MeetingTime";
 import Scheduling from "./pages/Scheduling";
 // error page
 import NotFoundPage from "./pages/NotFoundPage";
@@ -22,7 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/log-in" element={<LogInPage />} />
                     <Route path="/new-meeting" element={<NewMeetingPage />}>
                         <Route index element={<Navigate to={"name"} />} />
-                        <Route path="name" element={<MettingName />} />
+                        <Route path="name" element={<MeetingName next="../time" />} />
+                        <Route path="time" element={<MeetingTime prev="name" />} />
                         <Route path="availablity" element={<Scheduling />} />
                     </Route>
                     <Route path="/*" element={<NotFoundPage />} />

@@ -14,6 +14,8 @@ const MettingName = (props) => {
     const descriptionHandler = (e) => {
         setDescription(e.target.value);
     };
+
+
     return (
         <MeetingMask {...props} type="name">
             <div className={`${Classess.ContentCard}`}>

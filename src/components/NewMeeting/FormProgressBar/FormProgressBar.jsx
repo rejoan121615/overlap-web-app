@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Classess from "./FormProgressBar.module.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useEffect } from "react";
+import { Link, useRoutes, useLocation, useHref } from "react-router-dom";
 
 const FormProgressBar = (props) => {
     const [type, setType] = useState("name");
 
-    // update current state based on form type
+    const location = useLocation();
     useEffect(() => {
         props.type ? setType(props.type) : null;
     }, []);
@@ -14,13 +15,18 @@ const FormProgressBar = (props) => {
     return (
         <div className={`${Classess.ProContainer} ${props.className}`}>
             {/* left btn  */}
-            <button
-                className={`${Classess.Btn} ${
-                    type == "name" ? Classess.disable : ""
-                }`}
-            >
-                <FiChevronLeft className=" text-light-gray " />
-            </button>
+            {props.prev ? (
+                <Link to={`${props.prev}`}>
+                    <button
+                        className={`${Classess.Btn} ${
+                            type == "name" ? Classess.disable : ""
+                        }`}
+                    >
+                        <FiChevronLeft className=" text-light-gray " />
+                    </button>
+                </Link>
+            ) : null}
+
             {/* center  */}
             <div className=" flex-grow-1 ">
                 {/* form status title  */}
@@ -54,13 +60,17 @@ const FormProgressBar = (props) => {
                 </div>
             </div>
             {/* right btn  */}
-            <button
-                className={`${Classess.Btn} ${
-                    type == "availablity" ? Classess.disable : ""
-                }`}
-            >
-                <FiChevronRight className=" text-light-gray " />
-            </button>
+            {props.next ? (
+                <Link to={`${props.next}`}>
+                    <button
+                        className={`${Classess.Btn} ${
+                            type == "availablity" ? Classess.disable : ""
+                        }`}
+                    >
+                        <FiChevronRight className=" text-light-gray " />
+                    </button>
+                </Link>
+            ) : null}
         </div>
     );
 };

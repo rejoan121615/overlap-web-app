@@ -26,7 +26,7 @@ const MeetingMask = (props) => {
                     {props.children}
                 </div>
                 {/* Progress bar  */}
-                <FormProgressBar className={Classess.ProgressBar} />
+                <FormProgressBar {...props}  className={Classess.ProgressBar} />
                 {/* submit btn  */}
                 {type === "name" ? null : (
                     <div className={Classess.submitBtn}>
