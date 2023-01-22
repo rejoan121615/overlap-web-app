@@ -1,9 +1,6 @@
 import React from "react";
-import moment from "moment/moment";
-import { Row, Col } from "react-bootstrap";
 import Classess from "./Clender.module.scss";
-
-console.log(moment().weekday(0));
+import Month from "./Month";
 
 const WeekBar = () => {
     const weekList = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
@@ -24,6 +21,8 @@ const Calender = () => {
     return (
         <div className=" shadow-card">
             <WeekBar />
+            {/* month list  */}
+            <Month />
         </div>
     );
 };

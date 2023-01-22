@@ -12,6 +12,7 @@
   align-items: center;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 16px;
   .day {
     @include text(12px);
     color: $dark-gray;
