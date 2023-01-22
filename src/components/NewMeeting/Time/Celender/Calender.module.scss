@@ -1,0 +1,69 @@
+@import "../../../../scss/partials/mixing";
+@import "../../../../scss/partials/variable";
+
+.dayList {
+    padding: 0;
+    width: 80%;
+    @include mx(auto, auto);
+    @include px(15px, 15px);
+    @include py(6px, 6px);
+    column-gap: 17px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 16px;
+    .day {
+        @include text(12px);
+        color: $dark-gray;
+        text-transform: capitalize;
+        @include px(0px, 0px);
+        text-align: center;
+    }
+}
+
+.calenderContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // date wrapper 
+    .dateWrap {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+    // date -----------------
+    %centerRound {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+    .DateShadow {
+        @extend %centerRound;
+        padding: 3px;
+        background-color: $light-green;
+        @include resp ($lg) {
+          cursor: pointer;
+        }
+        &:first-child {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          .Date {
+            background-color: $dark-green;
+          }
+        }
+        .Date {
+            @extend %centerRound;
+            height: 21px;
+            width: 100%;
+            border-radius: 20px;
+            p{ 
+              margin-bottom: 0;
+              @include text(12px);
+              margin-top: 1px;
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import Classess from "./Clender.module.scss";
+import Classess from "./Calender.module.scss";
 import Month from "./Month";
 
 const WeekBar = () => {
