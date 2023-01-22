@@ -13,10 +13,10 @@ const FormProgressBar = (props) => {
     }, []);
 
     return (
-        <div className={`${Classess.ProContainer} ${props.className}`}>
+        <div className={`${Classess.ProBtnContainer} ${props.className}`}>
             {/* left btn  */}
             {props.prev ? (
-                <Link to={`${props.prev}`}>
+                <Link className={Classess.btn_1} to={`${props.prev}`}>
                     <button
                         className={`${Classess.Btn} ${
                             type == "name" ? Classess.disable : ""
@@ -28,7 +28,7 @@ const FormProgressBar = (props) => {
             ) : null}
 
             {/* center  */}
-            <div className=" flex-grow-1 ">
+            <div className={Classess.ProContainer}>
                 {/* form status title  */}
                 <div className={Classess.Title}>
                     {["name", "time", "availablity"].map((text, index) => {
@@ -61,7 +61,7 @@ const FormProgressBar = (props) => {
             </div>
             {/* right btn  */}
             {props.next ? (
-                <Link to={`${props.next}`}>
+                <Link className={Classess.btn_2} to={`${props.next}`}>
                     <button
                         className={`${Classess.Btn} ${
                             type == "availablity" ? Classess.disable : ""

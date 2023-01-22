@@ -1,0 +1,22 @@
+@import '../../../../scss/partials/mixing';
+@import '../../../../scss/partials/variable';
+
+
+.dayList {
+  padding: 0;
+  width: 80%;
+  @include mx(auto, auto);
+  @include px(15px, 15px);
+  @include py(6px, 6px);
+  column-gap: 17px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  .day {
+    @include text(12px);
+    color: $dark-gray;
+    text-transform: capitalize;
+    @include px(0px, 0px);
+    text-align: center;
+  }
+}

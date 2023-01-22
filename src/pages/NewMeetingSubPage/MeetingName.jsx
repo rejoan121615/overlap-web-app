@@ -15,11 +15,12 @@ const MettingName = (props) => {
         setDescription(e.target.value);
     };
 
-
     return (
         <MeetingMask {...props} type="name">
             <div className={`${Classess.ContentCard}`}>
-                <h3 className={Classess.SecTitle}>create a meeting</h3>
+                <div className={Classess.SecTitleWrap}>
+                    <h3 className={Classess.SecTitle}>create a meeting</h3>
+                </div>
                 <div className={` shadow-card ${Classess.Shadow_card}`}>
                     <Form>
                         <Form.Group className=" form-group">

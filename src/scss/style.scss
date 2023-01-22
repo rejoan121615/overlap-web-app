@@ -82,8 +82,10 @@ body {
     width: 100%;
     box-shadow: $shadow-sm;
     border-radius: 25px;
+    padding: 16px;
     @include resp($lg) {
         box-shadow: $shadow-lg;
+        padding: 32px;
     }
 }
 

@@ -7,9 +7,11 @@ import { FiCornerDownRight } from "react-icons/fi";
 
 const MeetingMask = (props) => {
     const [type, setType] = useState("");
+
     useEffect(() => {
         setType(props.type);
     }, []);
+
     return (
         <div className={`${Classess.containerWrap}`}>
             {/* meeting form  */}
@@ -26,9 +28,9 @@ const MeetingMask = (props) => {
                     {props.children}
                 </div>
                 {/* Progress bar  */}
-                <FormProgressBar {...props}  className={Classess.ProgressBar} />
+                <FormProgressBar {...props} className={Classess.ProgressBar} />
                 {/* submit btn  */}
-                {type === "name" ? null : (
+                {false && (
                     <div className={Classess.submitBtn}>
                         <LongButton>
                             Submit

@@ -18,16 +18,15 @@
     //         "content" auto
     //         "progressBar" 50px / 1fr;
     // }
-    &.name {
+
+    grid-template:
+        "content" auto
+        "progressBar" 50px / 1fr;
+    @include resp($lg) {
         grid-template:
-            "content" auto
-            "progressBar" 50px / 1fr;
-        @include resp($lg) {
-            grid-template:
-                "progressBar" 50px
-                "content" auto / 1fr;
-            row-gap: 64px;
-        }
+            "progressBar" 50px
+            "content" auto / 1fr;
+        row-gap: 64px;
     }
 }
 
@@ -45,14 +44,25 @@
 
 .ContentCard {
     grid-area: content;
+    .SecTitleWrap {
+        margin-bottom: 16px;
+    }
     .SecTitle {
         text-align: center;
         text-transform: capitalize;
         @include text(20px);
         color: $dark-gray;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         @include resp($lg) {
             display: none;
+        }
+    }
+    .SecText {
+        @include text(10px);
+        color: $light-gray-letter;
+        text-align: center;
+        @include resp ($lg) {
+            font-size: 14px;
         }
     }
 }
